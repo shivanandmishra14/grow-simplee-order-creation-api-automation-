@@ -1,0 +1,61 @@
+curl --location --request POST 'https://oyvm2iv4xj.execute-api.ap-south-1.amazonaws.com/v1/orin/api/orders/' \
+--header 'Authorization: eyJraWQiOiJjXC81XC9lTENoQlJSOHNjMVErRVFEMU8yc1RValwvMTdwdFVaTHc4VVhBTVdRPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiODExNzU1OS1jZjZkLTQ5NmEtYWZlNS1iYmU1NjVmMjM1NjciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbVwvYXAtc291dGgtMV9tSXp2NzF0anYiLCJwaG9uZV9udW1iZXJfdmVyaWZpZWQiOnRydWUsImNvZ25pdG86dXNlcm5hbWUiOiJ1bmljb21tZXJjZS50ZXN0IiwiYXVkIjoiN2puYmpkOGtqZjQ2bHF2ZWdhZWkwOGJocW0iLCJldmVudF9pZCI6IjhkNDVjZDU0LTQ0ZWYtNDhlNS04NWU3LWNhNjEyNjYzNGY2ZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjIxMzU5NTk4LCJwaG9uZV9udW1iZXIiOiIrOTE4MjEwODg4NTY3IiwiZXhwIjoxNjIxNDQ1OTk4LCJpYXQiOjE2MjEzNTk1OTgsImZhbWlseV9uYW1lIjoiNyIsImVtYWlsIjoicm9oaXQuc2luZ2hAdW5pY29tbWVyY2UuY29tIn0.o9uxcPvCEANI2ek8AIwbQ8HMoy80KQJ2-W_ncnVqHnqOjPh10zrrt7_EfaRzKzsjqCbwScvewYEPhhNG7VUEDbkL9KJSItJxg0Rc4ydt91nR18U7A7j11v0ZvKNAr8Ji28aafURvqiBWD9e9PdLN8yrT593JQ6_pkCSCP6md0Y8b2iZcFj6ucpRNnk55xne_bUtVlv60kXprcwDx_kt6TjGkfrXko4r_KlBMJf14uYHbzmo1VLzgYgZ-20_lmgs_JjZsMTcqvuwxcXXgDtzFkkBl7NsMALT0sXMOi15AQvRWj1yJVVv-6SrdxqTVBkCsSnAvBeodX2HC4QGtJJurVA' \
+--data-raw '{
+    "automation": true,
+    "orders": [
+        {
+            "channel_id": "manual",
+            "channel_order_id": "-BG2dAmouX25",
+            "order_amount": 100,
+            "paymentType": "COD",
+            "billing_address": {
+                "city": "New York",
+                "name": "Yash Sharma",
+                "email": "saurabhsinha209@gmail.com",
+                "msisdn": "8377086507",
+                "country": "India",
+                "pinCode": 141006,
+                "address1": "Baker Street",
+                "address2": " ",
+                "province": "Uttar Pradesh",
+                "last_name": "Sharma",
+                "first_name": "Yash"
+            },
+            "shipping_address": {
+                "city": "New York",
+                "name": "Yash Sharma",
+                "email": "yash@growsimplee.com",
+                "msisdn": "8377086507",
+                "country": "India",
+                "pinCode": 141006,
+                "address1": "Baker Street",
+                "address2": " ",
+                "province": "Uttar Pradesh",
+                "last_name": "Sharma",
+                "first_name": "Yash"
+            },
+            "suborders": [
+                {
+                    "channel_listing_id": "CH1712",
+                    "length" : 10,
+                    "breadth" : 20,
+                    "height" : 90,
+                    "dead_weight" : 12,
+                    "channel_suborder_id": "Abc",
+                    "quantity" :1,
+                    "codAmount": "10",
+                    "suborder_value":"200",
+                    "items" : [
+                        {
+                            "name":"SONY XB10",
+                            "description" : "Mini Speaker",
+                            "quantity": 3,
+                            "item_id": "123456",
+                            "item_value" : "10.00"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}'
